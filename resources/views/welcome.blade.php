@@ -33,7 +33,7 @@
                 <img src="{{ asset('assets/images/vector-1.svg') }}" class="absolute w-full h-auto -z-10" alt="vector-1" srcset="">
                 <div class="pt-10 sm:pt-15 xl:pt-27 3xl:pt-40 pb-10 space-x-6 mx-auto max-w-6xl flex items-center justify-between">
                     <div class="flex flex-col space-y-7">
-                        <h1 class="text-7xl font-semibold leading-22 text-white">Sewa mobil <br> <span class="text-secondary">disini aja.</span></h1>
+                        <h1 class="text-8xl font-semibold leading-28 text-white">Sewa mobil <br> <span class="text-secondary">disini aja.</span></h1>
                         <p class="text-[20px]">Kami membuka pintu bagi Anda untuk menjelajahi dunia dengan nyaman dan penuh gaya. Menjadi mitra perjalanan tepercaya Anda.</p>
                         <x-ui.button-primary type="button" class="px-20 max-w-fit">Call us</x-ui.button-primary>
                     </div>
@@ -41,7 +41,7 @@
                         <img src="{{ asset('assets/images/hero-img.svg') }}" class="w-7xl" alt="car-2" srcset="">
                     </div>
                 </div>
-                <img src="{{ asset('assets/images/vector-2.svg') }}" class=" bottom-0 w-full object-fill -z-10" alt="vector-1" srcset="">
+                <img src="{{ asset('assets/images/vector-2.svg') }}" class=" bottom-0 w-full object-fill -z-10" alt="vector-2" srcset="">
             </section>
 
 	</body>
