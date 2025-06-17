@@ -34,7 +34,7 @@
                 <div class="pt-10 sm:pt-15 xl:pt-27 3xl:pt-40 pb-10 space-x-6 mx-auto max-w-6xl flex items-center justify-between">
                     <div class="flex flex-col space-y-7">
                         <h1 class="text-8xl font-semibold leading-28 text-white">Sewa mobil <br> <span class="text-secondary">disini aja.</span></h1>
-                        <p class="text-[20px]">Kami membuka pintu bagi Anda untuk menjelajahi dunia dengan nyaman dan penuh gaya. Menjadi mitra perjalanan tepercaya Anda.</p>
+                        <p class="text-[20px]" text-[#4B4B4B] >Kami membuka pintu bagi Anda untuk menjelajahi dunia dengan nyaman dan penuh gaya. Menjadi mitra perjalanan tepercaya Anda.</p>
                         <x-ui.button-primary type="button" class="px-20 max-w-fit">Call us</x-ui.button-primary>
                     </div>
                     <div>
@@ -44,5 +44,127 @@
                 <img src="{{ asset('assets/images/vector-2.svg') }}" class=" bottom-0 w-full object-fill -z-10" alt="vector-2" srcset="">
             </section>
 
+            <section class="mx-auto max-w-6xl py-16">
+                <div class="flex justify-between items-center">
+                    <h2 class="text-5xl font-semibold">Armada Kami</h2>
+                    <x-ui.button-primary type="button" class="px-3 py-1.5">Lihat Semua</x-ui.button-primary>
+                </div>
+                <div class="mt-10">
+                    <div class="grid grid-cols-3 gap-4 relative group">
+                        <div class="bg-[url('/public/assets/images/vector-3.svg')] w-full bg-fill bg-no-repeat shadow-md px-5 py-10 transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-3d">
+                            <img src="{{ asset('assets/images/car-2.png') }}" class="" alt="vector-1" srcset="">
+                            <div class="mt-5">
+                                <h4 class="text-2xl text-center font-semibold">Avanza 2025</h4>
+                                <div class="flex justify-between mt-8">
+                                    <div class="flex flex-col">
+                                        <span class="text-[#4B4B4B]  font-medium">Lepas kunci</span>
+                                        <x-ui.button-primary type="button" class="px-2 max-w-fit">Rp. 200.000 / Hari</x-ui.button-primary>
+                                    </div>
+
+                                    <div class="flex flex-col">
+                                        <span class="text-[#4B4B4B] font-medium ">Ikut supir</span>
+                                        <x-ui.button-primary type="button" class="px-2 max-w-fit">Rp. 300.000 / Hari</x-ui.button-primary>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-[url('/public/assets/images/vector-3.svg')] w-full bg-fill bg-no-repeat shadow-md px-5 py-10 transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-3d">
+                            <img src="{{ asset('assets/images/car-2.png') }}" class="" alt="vector-1" srcset="">
+                            <div class="mt-5">
+                                <h4 class="text-2xl text-center font-semibold">Avanza 2025</h4>
+
+                                <div class="flex justify-between mt-8">
+                                    <div class="flex flex-col">
+                                        <span class="text-[#4B4B4B]  font-medium">Lepas kunci</span>
+                                        <x-ui.button-primary type="button" class="px-2 max-w-fit">Rp. 200.000 / Hari</x-ui.button-primary>
+                                    </div>
+
+                                    <div class="flex flex-col">
+                                        <span class="text-[#4B4B4B] font-medium ">Ikut supir</span>
+                                        <x-ui.button-primary type="button" class="px-2 max-w-fit">Rp. 300.000 / Hari</x-ui.button-primary>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-[url('/public/assets/images/vector-3.svg')] w-full bg-fill bg-no-repeat shadow-md px-5 py-10 transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-3d">
+                            <img src="{{ asset('assets/images/car-2.png') }}" class="" alt="vector-1" srcset="">
+                            <div class="mt-5">
+                                <h4 class="text-2xl text-center font-semibold">Avanza 2025</h4>
+
+                                <div class="flex justify-between mt-8">
+                                    <div class="flex flex-col">
+                                        <span class="text-[#4B4B4B]  font-medium">Lepas kunci</span>
+                                        <x-ui.button-primary type="button" class="px-2 py-1">Rp. 300.000 / Hari</x-ui.button-primary>
+                                    </div>
+
+                                    <div class="flex flex-col">
+                                        <span class="text-[#4B4B4B] font-medium ">Ikut supir</span>
+                                        <x-ui.button-primary type="button" class="px-2 py-1">Rp. 300.000 / Hari</x-ui.button-primary>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-[url('/public/assets/images/vector-3.svg')] w-full bg-fill bg-no-repeat shadow-md px-5 py-10 transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-3d">
+                            <img src="{{ asset('assets/images/car-2.png') }}" class="" alt="vector-1" srcset="">
+                            <div class="mt-5">
+                                <h4 class="text-2xl text-center font-semibold">Avanza 2025</h4>
+
+                                <div class="flex justify-between mt-8">
+                                    <div class="flex flex-col">
+                                        <span class="text-[#4B4B4B]  font-medium">Lepas kunci</span>
+                                        <x-ui.button-primary type="button" class="px-2 py-1">Rp. 300.000 / Hari</x-ui.button-primary>
+                                    </div>
+
+                                    <div class="flex flex-col">
+                                        <span class="text-[#4B4B4B] font-medium ">Ikut supir</span>
+                                        <x-ui.button-primary type="button" class="px-2 py-1">Rp. 300.000 / Hari</x-ui.button-primary>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-[url('/public/assets/images/vector-3.svg')] w-full bg-fill bg-no-repeat shadow-md px-5 py-10 transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-3d">
+                            <img src="{{ asset('assets/images/car-2.png') }}" class="" alt="vector-1" srcset="">
+                            <div class="mt-5">
+                                <h4 class="text-2xl text-center font-semibold">Avanza 2025</h4>
+
+                                <div class="flex justify-between mt-8">
+                                    <div class="flex flex-col">
+                                        <span class="text-[#4B4B4B]  font-medium">Lepas kunci</span>
+                                        <x-ui.button-primary type="button" class="px-2 py-1">Rp. 300.000 / Hari</x-ui.button-primary>
+                                    </div>
+
+                                    <div class="flex flex-col">
+                                        <span class="text-[#4B4B4B] font-medium ">Ikut supir</span>
+                                        <x-ui.button-primary type="button" class="px-2 py-1">Rp. 300.000 / Hari</x-ui.button-primary>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-[url('/public/assets/images/vector-3.svg')] w-full bg-fill bg-no-repeat shadow-md px-5 py-10 transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-3d">
+                            <img src="{{ asset('assets/images/car-2.png') }}" class="" alt="vector-1" srcset="">
+                            <div class="mt-5">
+                                <h4 class="text-2xl text-center font-semibold">Avanza 2025</h4>
+
+                                <div class="flex justify-between mt-8">
+                                    <div class="flex flex-col">
+                                        <span class="text-[#4B4B4B]  font-medium">Lepas kunci</span>
+                                        <x-ui.button-primary type="button" class="px-2 py-1">Rp. 300.000 / Hari</x-ui.button-primary>
+                                    </div>
+
+                                    <div class="flex flex-col">
+                                        <span class="text-[#4B4B4B] font-medium ">Ikut supir</span>
+                                        <x-ui.button-primary type="button" class="px-2 py-1">Rp. 300.000 / Hari</x-ui.button-primary>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 	</body>
 </html>
