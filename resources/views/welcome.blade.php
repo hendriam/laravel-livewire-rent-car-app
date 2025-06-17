@@ -35,7 +35,7 @@
                     <div class="flex flex-col space-y-7">
                         <h1 class="text-8xl font-semibold leading-28 text-white">Sewa mobil <br> <span class="text-secondary">disini aja.</span></h1>
                         <p class="text-[20px]" text-[#4B4B4B] >Kami membuka pintu bagi Anda untuk menjelajahi dunia dengan nyaman dan penuh gaya. Menjadi mitra perjalanan tepercaya Anda.</p>
-                        <x-ui.button-primary type="button" class="px-20 max-w-fit">Call us</x-ui.button-primary>
+                        <x-ui.button-primary type="button" class="px-20 max-w-fit text-xl">Call us</x-ui.button-primary>
                     </div>
                     <div>
                         <img src="{{ asset('assets/images/hero-img.svg') }}" class="w-7xl" alt="car-2" srcset="">
@@ -55,7 +55,7 @@
                             <img src="{{ asset('assets/images/car-2.png') }}" class="" alt="vector-1" srcset="">
                             <div class="mt-5">
                                 <h4 class="text-2xl text-center font-semibold">Avanza 2025</h4>
-                                <div class="flex justify-between mt-8">
+                                <div class="flex justify-between space-x-2 mt-8">
                                     <div class="flex flex-col">
                                         <span class="text-[#4B4B4B]  font-medium">Lepas kunci</span>
                                         <x-ui.button-primary type="button" class="px-2 max-w-fit">Rp. 200.000 / Hari</x-ui.button-primary>
@@ -74,7 +74,7 @@
                             <div class="mt-5">
                                 <h4 class="text-2xl text-center font-semibold">Avanza 2025</h4>
 
-                                <div class="flex justify-between mt-8">
+                                <div class="flex justify-between space-x-2 mt-8">
                                     <div class="flex flex-col">
                                         <span class="text-[#4B4B4B]  font-medium">Lepas kunci</span>
                                         <x-ui.button-primary type="button" class="px-2 max-w-fit">Rp. 200.000 / Hari</x-ui.button-primary>
@@ -93,7 +93,7 @@
                             <div class="mt-5">
                                 <h4 class="text-2xl text-center font-semibold">Avanza 2025</h4>
 
-                                <div class="flex justify-between mt-8">
+                                <div class="flex justify-between space-x-2 mt-8">
                                     <div class="flex flex-col">
                                         <span class="text-[#4B4B4B]  font-medium">Lepas kunci</span>
                                         <x-ui.button-primary type="button" class="px-2 py-1">Rp. 300.000 / Hari</x-ui.button-primary>
@@ -112,7 +112,7 @@
                             <div class="mt-5">
                                 <h4 class="text-2xl text-center font-semibold">Avanza 2025</h4>
 
-                                <div class="flex justify-between mt-8">
+                                <div class="flex justify-between space-x-2 mt-8">
                                     <div class="flex flex-col">
                                         <span class="text-[#4B4B4B]  font-medium">Lepas kunci</span>
                                         <x-ui.button-primary type="button" class="px-2 py-1">Rp. 300.000 / Hari</x-ui.button-primary>
@@ -131,7 +131,7 @@
                             <div class="mt-5">
                                 <h4 class="text-2xl text-center font-semibold">Avanza 2025</h4>
 
-                                <div class="flex justify-between mt-8">
+                                <div class="flex justify-between space-x-2 mt-8">
                                     <div class="flex flex-col">
                                         <span class="text-[#4B4B4B]  font-medium">Lepas kunci</span>
                                         <x-ui.button-primary type="button" class="px-2 py-1">Rp. 300.000 / Hari</x-ui.button-primary>
@@ -150,7 +150,7 @@
                             <div class="mt-5">
                                 <h4 class="text-2xl text-center font-semibold">Avanza 2025</h4>
 
-                                <div class="flex justify-between mt-8">
+                                <div class="flex justify-between space-x-2 mt-8">
                                     <div class="flex flex-col">
                                         <span class="text-[#4B4B4B]  font-medium">Lepas kunci</span>
                                         <x-ui.button-primary type="button" class="px-2 py-1">Rp. 300.000 / Hari</x-ui.button-primary>
