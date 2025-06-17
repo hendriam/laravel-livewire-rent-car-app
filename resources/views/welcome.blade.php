@@ -31,10 +31,10 @@
     
             <section>
                 <img src="{{ asset('assets/images/vector-1.svg') }}" class="absolute w-full h-auto -z-10" alt="vector-1" srcset="">
-                <div class="pt-10 sm:pt-15 xl:pt-27 3xl:pt-40 pb-10 space-x-6 mx-auto max-w-6xl flex items-center justify-between">
+                <div class="pt-5 sm:pt-10 md:pt-12 lg:pt-20 2xl:pt-27 3xl:pt-40 pb-10 space-x-6 mx-auto max-w-6xl flex items-center justify-between">
                     <div class="flex flex-col space-y-7">
-                        <h1 class="text-8xl font-semibold leading-28 text-white">Sewa mobil <br> <span class="text-secondary">disini aja.</span></h1>
-                        <p class="text-[20px]" text-[#4B4B4B] >Kami membuka pintu bagi Anda untuk menjelajahi dunia dengan nyaman dan penuh gaya. Menjadi mitra perjalanan tepercaya Anda.</p>
+                        <h1 class="text-7xl xl:text-8xl font-semibold leading-28 text-white">Sewa mobil <br> <span class="text-secondary">disini aja.</span></h1>
+                        <p class="text-[20px] text-[#4B4B4B]">Kami membuka pintu bagi Anda untuk menjelajahi dunia dengan nyaman dan penuh gaya. Menjadi mitra perjalanan tepercaya Anda.</p>
                         <x-ui.button-primary type="button" class="px-20 max-w-fit text-xl">Call us</x-ui.button-primary>
                     </div>
                     <div>
@@ -42,6 +42,36 @@
                     </div>
                 </div>
                 <img src="{{ asset('assets/images/vector-2.svg') }}" class=" bottom-0 w-full object-fill -z-10" alt="vector-2" srcset="">
+            </section>
+
+            <section class="mx-auto max-w-6xl pt-20 pb-10">
+                <div class="max-w-5xl mx-auto">
+                    <div class="flex sm:space-x-8 space-y-24 sm:flex-row flex-col justify-center items-center">
+                        <div class="-z-10">
+                            <div class="-z-10 relative">
+                                <div class="bg-primary -z-10 w-[450px] h-[450px] rounded-full pt-18 pl-15">
+                                    <h2 class="text-5xl text-white font-semibold">Sewa Mobil</h2>
+                                    <h3 class="text-6xl text-secondary font-semibold">Terlengkap</h3>
+                                </div>
+                                <img src="{{ asset('assets/images/hero-img.svg') }}" class="w-md h-auto absolute -bottom-20" alt="profile " srcset="">
+                            </div>
+                        </div>    
+                        <div class="">
+                            <h3 class="text-4xl font-semibold">CV. Rental Mobil</h3>
+                            <p class="mt-6 text-[#4B4B4B]">
+                                CV. Rental Mobil adalah penyedia jasa sewa mobil di kota medan yang telah beroperasi sejak 2020.
+                                Kami menawarkan jasa rental mobil dengan Harga yang cukup terjangkau, ada banyak pilihan Armada yang bisa anda pakai.
+                                <br>
+                                <br>
+                                Tersedia lebih 50+ unit yang sudah standby menanti kedatangan anda.
+                                <br>
+                                <br>
+                                Di antaranya:
+                                Ayla/Agya Facelift, New Calya, New Sigra, New Brio, New Agya, Avanza/Xenia, Ertiga, XL7, All New Avanza, All New Xenia, Rush, Terios, Xpander, New Livina, Grand Innova, Innova Reborn, Innova Zenix, Fortuner, Pajero dan Alphard.
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <section class="mx-auto max-w-6xl py-16">
