@@ -26,7 +26,7 @@
                     <li><a href="/">Services</a></li>
                 </ul>
     
-                <a href="/login" class="px-4 py-2.5 text-sm font-medium text-white bg-primary hover:bg-primary/90 hover:cursor-pointer">Login</a>
+                <a href="{{ route('login') }}" class="px-4 py-2.5 text-sm font-medium text-white bg-primary hover:bg-primary/90 hover:cursor-pointer">Login</a>
             </nav>
     
             <section class="">
