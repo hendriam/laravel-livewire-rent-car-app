@@ -14,7 +14,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
 	<body class="antialiased bg-white">
-            <nav class="mx-auto max-w-6xl py-4 flex items-center justify-between">
+            <nav class="mx-auto max-w-6xl py-4 px-5 xl:px-0 flex items-center justify-between">
                 <a href="/" class="flex space-x-1.5 items-center">
                     <img src="{{ asset('assets/logo.svg') }}" alt="Logo" />
                     <span class="text-secondary font-semibold text-2xl">Rent.Car</span>
@@ -29,9 +29,9 @@
                 <a href="" class="px-4 py-2.5 text-sm font-medium text-white bg-primary hover:bg-primary/90 hover:cursor-pointer">Login</a>
             </nav>
     
-            <section>
+            <section class="">
                 <img src="{{ asset('assets/images/vector-1.svg') }}" class="absolute w-full h-auto -z-10" alt="vector-1" srcset="">
-                <div class="pt-5 sm:pt-10 md:pt-12 lg:pt-18 2xl:pt-27 3xl:pt-40 pb-10 space-x-6 mx-auto max-w-6xl flex items-center justify-between">
+                <div class="px-5 xl:px-0 pt-5 sm:pt-10 md:pt-12 lg:pt-18 2xl:pt-27 3xl:pt-40 pb-10 space-x-6 mx-auto max-w-6xl flex items-center justify-between">
                     <div class="flex flex-col space-y-7">
                         <h1 class="text-7xl xl:text-8xl font-semibold leading-24 xl:leading-28 text-white">Sewa mobil <br> <span class="text-secondary">disini aja.</span></h1>
                         <p class="text-[20px] text-[#4B4B4B]">Kami membuka pintu bagi Anda untuk menjelajahi dunia dengan nyaman dan penuh gaya. Menjadi mitra perjalanan tepercaya Anda.</p>
@@ -44,7 +44,7 @@
                 <img src="{{ asset('assets/images/vector-2.svg') }}" class=" bottom-0 w-full object-fill -z-10" alt="vector-2" srcset="">
             </section>
 
-            <section class="mx-auto max-w-6xl pt-20 pb-10">
+            <section class="mx-auto max-w-6xl px-5 xl:px-0 pt-20 pb-10">
                 <div class="max-w-5xl mx-auto">
                     <div class="flex sm:space-x-8 space-y-24 sm:flex-row flex-col justify-center items-center">
                         <div class="-z-10">
@@ -74,7 +74,7 @@
                 </div>
             </section>
 
-            <section class="mx-auto max-w-6xl py-16">
+            <section class="mx-auto max-w-6xl px-5 xl:px-0 py-16">
                 <div class="flex justify-between items-center">
                     <h2 class="text-5xl font-semibold">Armada Kami</h2>
                     <x-ui.button-primary type="button" class="px-3 py-1.5">Lihat Semua</x-ui.button-primary>
@@ -198,8 +198,8 @@
             </section>
 
             <section class="border-t-2 border-primary">
-                <div class="mx-auto max-w-6xl py-10">
-                    <div class="flex space-x-36">
+                <div class="mx-auto max-w-6xl px-5 xl:px-0 py-10">
+                    <div class="flex space-x-36 items-start">
                         <div class="w-full">
                             <a href="/" class="flex space-x-1.5 items-center">
                                 <img src="{{ asset('assets/logo.svg') }}" alt="Logo" />
