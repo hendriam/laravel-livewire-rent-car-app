@@ -15,7 +15,7 @@
         @livewireStyles
     </head>
 	<body class="antialiased bg-gray-50 h-screen w-full flex flex-col justify-center items-center">
-		<a href="/" class="flex space-x-1.5 items-center">
+		<a href="{{ route('home') }}" class="flex space-x-1.5 items-center">
 			<img src="{{ asset('assets/logo.svg') }}" alt="Logo" />
 			<span class="text-secondary font-semibold text-2xl">Rent.Car</span>
 		</a>

@@ -1,5 +1,5 @@
 <nav class="mx-auto max-w-6xl py-4 px-5 xl:px-0 flex items-center justify-between">
-	<a href="/" class="flex space-x-1.5 items-center">
+	<a href="{{ route('home') }}" class="flex space-x-1.5 items-center">
 		<img src="{{ asset('assets/logo.svg') }}" alt="Logo" />
 		<span class="text-secondary font-semibold text-2xl">Rent.Car</span>
 	</a>

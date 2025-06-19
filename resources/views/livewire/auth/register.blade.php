@@ -35,7 +35,7 @@
         <x-ui.button-primary type="submit" class="w-full p-2.5">Create an account</x-ui.button-primary>
 
         <p class="text-sm font-light text-gray-700 dark:text-gray-400">
-            Already have an account? <a href="/login" class="font-medium text-primary hover:underline dark:text-blue-500">Login here</a>
+            Already have an account? <a href="{{ route('login')}}" wire:navigate class="font-medium text-primary hover:underline dark:text-blue-500">Login here</a>
         </p>
     </form>
 </section>
