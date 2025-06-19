@@ -26,7 +26,7 @@
                     <li><a href="/">Services</a></li>
                 </ul>
     
-                <a href="" class="px-4 py-2.5 text-sm font-medium text-white bg-primary hover:bg-primary/90 hover:cursor-pointer">Login</a>
+                <a href="/login" class="px-4 py-2.5 text-sm font-medium text-white bg-primary hover:bg-primary/90 hover:cursor-pointer">Login</a>
             </nav>
     
             <section class="">
@@ -74,7 +74,7 @@
                 </div>
             </section>
 
-            <section class="mx-auto max-w-6xl px-5 xl:px-0 py-16">
+            <section class="mx-auto max-w-6xl px-5 xl:px-0 py-16 bg-gray-50">
                 <div class="flex justify-between items-center">
                     <h2 class="text-5xl font-semibold">Armada Kami</h2>
                     <x-ui.button-primary type="button" class="px-3 py-1.5">Lihat Semua</x-ui.button-primary>
