@@ -3,7 +3,7 @@
     <form class="mt-6 flex flex-col space-y-4">
         <div>
             <x-ui.label for="email">Email</x-ui.label>
-            <x-ui.input type="text" name="email" wire:model.defer="email" class="w-full p-2.5" placeholder="test@example.com" required></x-ui.input>
+            <x-ui.input type="text" wire:model.defer="email" class="w-full p-2.5" placeholder="test@example.com" required></x-ui.input>
         </div>
 
         <x-ui.button-primary type="submit" class="w-full p-2.5">Send</x-ui.button-primary>

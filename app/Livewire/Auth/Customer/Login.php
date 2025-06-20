@@ -19,14 +19,13 @@ class Login extends Component
     public function login(): void
     {
         $this->validate([
-            'email' => 'required|string|email',
-            'password' => 'required|string',
+            'email' => 'required|email',
+            'password' => 'required|min:6',
         ]);
 
         if (Auth::attempt(['email' => $this->email, 'password' => $this->password], $this->remember)) {
             session()->regenerate();
-            // return redirect()->intended('/dashboard');
-            $this->redirectIntended(default: route('home', absolute: false), navigate: true);
+            $this->redirectIntended();
         }
 
         $this->addError('email', 'Email atau password salah.');
