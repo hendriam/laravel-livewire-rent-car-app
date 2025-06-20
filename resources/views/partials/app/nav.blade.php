@@ -8,14 +8,12 @@
 		<li><a href="/">About us</a></li>
 		<li><a href="/">Contact</a></li>
 		<li><a href="/">Services</a></li>
-		
 	</ul>
-
 	
 	@if(!auth()->user())
 		<div class="flex space-x-2">
-			<a href="{{ route('login') }}" class="px-4 py-2.5 text-sm font-medium text-secondary bg-white hover:bg-gray-50 hover:cursor-pointer">Login</a>
-			<a href="{{ route('register') }}" class="px-4 py-2.5 text-sm font-medium text-white bg-primary hover:bg-primary/90 hover:cursor-pointer">Register</a>
+			<a href="{{ route('login') }}" class="px-4 py-2.5 text-base font-medium text-secondary bg-white hover:bg-gray-50 hover:cursor-pointer">Login</a>
+			<a href="{{ route('register') }}" class="px-4 py-2.5 text-base font-medium text-white bg-primary hover:bg-primary/90 hover:cursor-pointer">Register</a>
 		</div>
 	@else
 		<button
@@ -50,15 +48,8 @@
 						@csrf
 						<button type="submit" class="w-full text-start py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white hover:cursor-pointer">Logout</button> 
 					</form>
-					<!-- <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a> -->
 				</li>
 			</ul>
 		</div>
-
-		<!-- <form action="{{ route('logout') }}" method="post">
-			@csrf
-	        <x-ui.button-primary type="submit" class="w-full p-2.5">Logout</x-ui.button-primary>
-		</form> -->
 	@endif
-
 </nav>
