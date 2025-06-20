@@ -14,7 +14,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
         @livewireStyles
     </head>
-	<body class="antialiased bg-gray-50 h-screen w-full flex flex-col justify-center items-center">
+	<body class="antialiased bg-gray-50 dark:bg-gray-900 h-screen w-full flex flex-col justify-center items-center">
 		<a href="{{ route('home') }}" class="flex space-x-1.5 items-center">
 			<img src="{{ asset('assets/logo.svg') }}" alt="Logo" />
 			<span class="text-secondary font-semibold text-2xl">Rent.Car</span>
