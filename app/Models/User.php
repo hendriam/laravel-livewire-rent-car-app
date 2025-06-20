@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
@@ -21,6 +22,8 @@ class User extends Authenticatable
         'fullname',
         'email',
         'password',
+        'photo',
+        'type',
     ];
 
     /**
@@ -44,5 +47,17 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    // Relasi ke customer (jika user adalah pelanggan)
+    public function customer(): HasOne
+    {
+        return $this->hasOne(Customer::class);
+    }
+
+    // Relasi ke admin (jika user adalah admin)
+    public function admin(): HasOne
+    {
+        return $this->hasOne(Admin::class);
     }
 }
