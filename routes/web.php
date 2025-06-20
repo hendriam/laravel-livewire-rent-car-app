@@ -22,8 +22,15 @@ Route::get('forgot-password', CustomerForgetPassword::class)->name('forgot-passw
 
 Route::get('admin/login', AdminLogin::class)->name('admin.login');
 
-Route::get('admin/dashboard', AdminDashboard::class)->name('admin.dashboard');
+Route::middleware(['auth'])->group(function () {
+
+    Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function () {
+		Route::get('dashboard', AdminDashboard::class)->name('dashboard');
+	});
+
+	Route::post('logout', [LogoutController::class, 'logout'])->name('logout');    
+});
 
 
-Route::post('logout', [LogoutController::class, 'logout'])->name('logout');    
+
 
