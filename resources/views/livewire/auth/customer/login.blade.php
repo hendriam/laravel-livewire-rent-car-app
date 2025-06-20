@@ -24,7 +24,10 @@
             <a href="{{ route('forgot-password') }}" class="text-sm font-medium text-primary hover:underline dark:text-primary-500">Forgot password?</a>
         </div>
 
-        <x-ui.button-primary type="submit" class="w-full p-2.5">Login</x-ui.button-primary>
+        <x-ui.button-primary type="submit" class="w-full p-2.5">
+            <span wire:loading.remove wire:target="login">Login</span>
+            <span wire:loading wire:target="login">Process...</span>
+        </x-ui.button-primary>
 
         <p class="text-sm font-light text-gray-700 dark:text-gray-400">
             Don’t have an account yet? <a href="{{ route('register') }}" wire:navigate class="font-medium text-primary hover:underline dark:text-blue-500">Register</a>

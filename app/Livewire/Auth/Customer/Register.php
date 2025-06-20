@@ -44,7 +44,6 @@ class Register extends Component
         Auth::login($user); // langsung login setelah register
 
         $this->redirectIntended(default: route('home', absolute: false), navigate: true);
-        // return redirect()->route('home');
     }
 
     public function render()
