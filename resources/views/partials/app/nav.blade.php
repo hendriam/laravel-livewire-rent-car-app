@@ -8,7 +8,17 @@
 		<li><a href="/">About us</a></li>
 		<li><a href="/">Contact</a></li>
 		<li><a href="/">Services</a></li>
+		
 	</ul>
 
-	<a href="{{ route('login') }}" class="px-4 py-2.5 text-sm font-medium text-white bg-primary hover:bg-primary/90 hover:cursor-pointer">Login</a>
+	
+	@if(!auth()->user())
+		<a href="{{ route('login') }}" class="px-4 py-2.5 text-sm font-medium text-white bg-primary hover:bg-primary/90 hover:cursor-pointer">Login</a>
+	@else
+		<form action="{{ route('logout') }}" method="post">
+			@csrf
+	        <x-ui.button-primary type="submit" class="w-full p-2.5">Logout</x-ui.button-primary>
+		</form>
+	@endif
+
 </nav>
