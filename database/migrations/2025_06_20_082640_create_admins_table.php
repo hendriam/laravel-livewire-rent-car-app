@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('admins', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('restrict');
-            $table->string('role')->default('admin'); // admin / kasir / operasional
+            $table->string('role')->default('superadmin'); // superadmin / kasir / operasional
             $table->timestamps();
         });
     }
