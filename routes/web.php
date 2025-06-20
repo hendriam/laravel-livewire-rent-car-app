@@ -2,12 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Livewire\App\Home;
-use App\Livewire\Auth\Login;
-use App\Livewire\Auth\Register;
-use App\Livewire\Auth\ForgotPassword;
+use App\Livewire\Auth\Customer\Login as CustomerLogin;
+use App\Livewire\Auth\Customer\Register as CustomerRegister;
+use App\Livewire\Auth\Customer\ForgotPassword as CustomerForgetPassword;
 
 Route::get('/', Home::class)->name('home');
 
-Route::get('login', Login::class)->name('login');
-Route::get('register', Register::class)->name('register');
-Route::get('forgot-password', ForgotPassword::class)->name('forgot-password');
+Route::get('login', CustomerLogin::class)->name('login');
+Route::get('register', CustomerRegister::class)->name('register');
+Route::get('forgot-password', CustomerForgetPassword::class)->name('forgot-password');

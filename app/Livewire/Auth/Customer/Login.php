@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Livewire\Auth;
+namespace App\Livewire\Auth\Customer;
 
 use Livewire\Component;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 use Illuminate\Support\Facades\Auth;
 
-#[Layout('components.layouts.auth')]
+#[Layout('components.layouts.auth-customer')]
 class Login extends Component
 {
     #[Title('Login - Rent.Car')] 
@@ -34,6 +34,6 @@ class Login extends Component
 
     public function render()
     {
-        return view('livewire.auth.login');
+        return view('livewire.auth.customer.login');
     }
 }

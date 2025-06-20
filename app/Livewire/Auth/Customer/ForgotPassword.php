@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Livewire\Auth;
+namespace App\Livewire\Auth\Customer;
 
 use Livewire\Component;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
 
-#[Layout('components.layouts.auth')]
+#[Layout('components.layouts.auth-customer')]
 class ForgotPassword extends Component
 {
     #[Title('Forgot Password - Rent.Car')] 
@@ -15,6 +15,6 @@ class ForgotPassword extends Component
 
     public function render()
     {
-        return view('livewire.auth.forgot-password');
+        return view('livewire.auth.customer.forgot-password');
     }
 }
