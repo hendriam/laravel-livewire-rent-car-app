@@ -21,7 +21,7 @@
                     <label for="remember" class="text-gray-700 dark:text-gray-300">Remember me</label>
                 </div>
             </div>
-            <a href="{{ route('forgot-password') }}" class="text-sm font-medium text-primary hover:underline dark:text-primary-500">Forgot password?</a>
+            <a href="{{ route('forgot-password') }}" wire:navigate class="text-sm font-medium text-primary hover:underline dark:text-primary-500">Forgot password?</a>
         </div>
 
         <x-ui.button-primary type="submit" class="w-full p-2.5">

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Auth\Customer;
+namespace App\Livewire\Customer\Auth;
 
 use Livewire\Component;
 use Livewire\Attributes\Layout;
@@ -33,6 +33,6 @@ class Login extends Component
 
     public function render()
     {
-        return view('livewire.auth.customer.login');
+        return view('livewire.customer.auth.login');
     }
 }

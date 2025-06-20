@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Auth\Customer;
+namespace App\Livewire\Customer\Auth;
 
 use App\Models\Customer;
 use App\Models\User;
@@ -48,6 +48,6 @@ class Register extends Component
 
     public function render()
     {
-        return view('livewire.auth.customer.register');
+        return view('livewire.customer.auth.register');
     }
 }
