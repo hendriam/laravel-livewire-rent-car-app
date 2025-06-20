@@ -21,22 +21,19 @@ class Login extends Component
         'password' => 'required|min:6',
     ];
 
-    public function login()
+    public function login(): void
     {
         $this->validate();
 
-        if (Auth::attempt([
-            'email' => $this->email,
-            'password' => $this->password
-        ], $this->remember)) {
-
+        if (Auth::attempt(['email' => $this->email, 'password' => $this->password], $this->remember)) {
             if (Auth::user()->type !== 'admin') {
                 Auth::logout();
                 $this->addError('email', 'Akses ditolak. Anda bukan admin.');
                 return;
             }
 
-            return redirect()->route('admin.dashboard');
+            session()->regenerate();
+            $this->redirectIntended(default: route('admin.dashboard', absolute: false), navigate: false);
         }
 
         $this->addError('email', 'Email atau password salah.');

@@ -24,9 +24,15 @@ class Login extends Component
         ]);
 
         if (Auth::attempt(['email' => $this->email, 'password' => $this->password], $this->remember)) {
+            if (Auth::user()->type !== 'customer') {
+                Auth::logout();
+                $this->addError('email', 'Akses ditolak. Anda bukan customer.');
+                return;
+            }
+
             session()->regenerate();
             $this->redirectIntended(default: route('home', absolute: false), navigate: false);
-    }
+        }
 
         $this->addError('email', 'Email atau password salah.');
     }
