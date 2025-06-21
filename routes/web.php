@@ -11,6 +11,8 @@ use App\Livewire\Customer\Auth\ForgotPassword as CustomerForgetPassword;
 // for admin 
 use App\Livewire\Admin\Auth\Login as AdminLogin;
 use App\Livewire\Admin\Dashboard as AdminDashboard;
+use App\Livewire\Admin\User\Index as AdminUserIndex;
+use App\Livewire\Admin\User\Create as AdminUserCreate;
 
 use App\Http\Controllers\LogoutAdminController;
 use App\Http\Controllers\LogoutCustomerController;
@@ -27,6 +29,11 @@ Route::get('admin/login', AdminLogin::class)->name('admin.login');
 
 Route::middleware(['isAdmin'])->prefix('admin')->name('admin.')->group(function () {
 	Route::get('dashboard', AdminDashboard::class)->name('dashboard');
+
+	Route::prefix('users')->name('users.')->group(function () {
+        Route::get('/', AdminUserIndex::class)->name('index');
+        Route::get('/create', AdminUserCreate::class)->name('create');
+    });
 
 	Route::post('logout', [LogoutAdminController::class, 'logout'])->name('logout');    
 });
