@@ -20,14 +20,15 @@ Route::get('login', CustomerLogin::class)->name('login');
 Route::get('register', CustomerRegister::class)->name('register');
 Route::get('forgot-password', CustomerForgetPassword::class)->name('forgot-password');
 
+Route::get('admin', AdminLogin::class)->name('admin');
 Route::get('admin/login', AdminLogin::class)->name('admin.login');
 
+
+Route::middleware(['isAdmin'])->prefix('admin')->name('admin.')->group(function () {
+	Route::get('dashboard', AdminDashboard::class)->name('dashboard');
+});
+
 Route::middleware(['auth'])->group(function () {
-
-    Route::middleware(['admin'])->prefix('admin')->name('admin.')->group(function () {
-		Route::get('dashboard', AdminDashboard::class)->name('dashboard');
-	});
-
 	Route::post('logout', [LogoutController::class, 'logout'])->name('logout');    
 });
 
