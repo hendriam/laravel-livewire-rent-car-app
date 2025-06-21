@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Illuminate\Support\Facades\Auth;
 
-class AdminOnly
+class IsCustomer
 {
     /**
      * Handle an incoming request.
@@ -16,9 +16,14 @@ class AdminOnly
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if (Auth::check() && Auth::user()->type === 'admin') {
-            return $next($request);
+        if (!Auth::check()) {
+            return redirect()->route('home');
         }
-        abort(403);
+
+        if (Auth::user()->type !== 'customer') {
+            abort(403);
+        }
+        
+        return $next($request);
     }
 }
