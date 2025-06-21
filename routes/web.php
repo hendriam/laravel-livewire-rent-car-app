@@ -28,10 +28,11 @@ Route::middleware(['isAdmin'])->prefix('admin')->name('admin.')->group(function 
 	Route::get('dashboard', AdminDashboard::class)->name('dashboard');
 });
 
-Route::middleware(['auth'])->group(function () {
-	Route::post('logout', [LogoutController::class, 'logout'])->name('logout');    
+Route::middleware(['isCustomer'])->group(function () {
+	
 });
 
+Route::post('logout', [LogoutController::class, 'logout'])->name('logout');    
 
 
 
