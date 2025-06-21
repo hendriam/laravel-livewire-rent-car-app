@@ -30,5 +30,5 @@
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
-@plugin "tailwindcss-motion"
+@plugin "tailwindcss-motion";
 @plugin "flowbite/plugin";
