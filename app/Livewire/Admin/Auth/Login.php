@@ -20,7 +20,14 @@ class Login extends Component
         'email' => 'required|email',
         'password' => 'required|min:6',
     ];
-
+    
+    public function mount()
+    {
+        if (Auth::check() && Auth::user()->type === 'admin') {
+            return redirect()->route('admin.dashboard');
+        }
+    }
+    
     public function login(): void
     {
         $this->validate();
@@ -38,7 +45,7 @@ class Login extends Component
 
         $this->addError('email', 'Email atau password salah.');
     }
-    
+
     public function render()
     {
         return view('livewire.admin.auth.login');
