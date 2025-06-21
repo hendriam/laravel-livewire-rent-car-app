@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
 
-class LogoutController extends Controller
+class LogoutAdminController extends Controller
 {
     public function logout(Request $request) : RedirectResponse
     {
@@ -15,6 +15,6 @@ class LogoutController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
         
-        return redirect()->route('home');
+        return redirect()->route('admin.login');
     }
 }

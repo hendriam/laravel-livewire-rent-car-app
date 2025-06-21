@@ -69,7 +69,7 @@
                 
                 <ul class="py-1 text-gray-700 dark:text-gray-300" aria-labelledby="dropdown">
                     <li  class="w-full">
-						<form action="{{ route('logout') }}" method="post">
+						<form action="{{ route('admin.logout') }}" method="post">
 							@csrf
 							<button type="submit" class="w-full text-start py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white hover:cursor-pointer">Logout</button> 
 						</form>
