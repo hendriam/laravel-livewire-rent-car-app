@@ -1,3 +1,3 @@
-<div>
-    <!-- Be present above all else. - Naval Ravikant -->
+<div class="relative overflow-x-auto">
+    {{ $slot }}
 </div>
