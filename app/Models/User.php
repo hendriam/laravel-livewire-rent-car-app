@@ -22,8 +22,11 @@ class User extends Authenticatable
         'fullname',
         'email',
         'password',
+        'phone',
+        'address',
         'photo',
         'type',
+        'role',
     ];
 
     /**
@@ -47,17 +50,5 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
-    }
-
-    // Relasi ke customer (jika user adalah pelanggan)
-    public function customer(): HasOne
-    {
-        return $this->hasOne(Customer::class);
-    }
-
-    // Relasi ke admin (jika user adalah admin)
-    public function admin(): HasOne
-    {
-        return $this->hasOne(Admin::class);
     }
 }
