@@ -2,7 +2,6 @@
 
 namespace App\Livewire\Customer\Auth;
 
-use App\Models\Customer;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
@@ -33,12 +32,8 @@ class Register extends Component
             'fullname' => $this->fullname,
             'email' => $this->email,
             'password' => Hash::make($this->password),
-            'type' => 'customer',
-        ]);
-
-        Customer::create([
-            'user_id' => $user->id,
             'phone' => $this->phone,
+            'type' => 'customer',
         ]);
 
         Auth::login($user); // langsung login setelah register
