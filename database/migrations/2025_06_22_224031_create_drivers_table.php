@@ -18,6 +18,8 @@ return new class extends Migration
             $table->text('address')->nullable();
             $table->enum('status', ['available', 'unavailable'])->default('available');
             $table->string('photo')->nullable();
+            $table->foreignId('created_by')->constrained('users')->cascadeOnUpdate()->restrictOnDelete();
+            $table->foreignId('updated_by')->nullable()->constrained('users')->cascadeOnUpdate()->nullOnDelete();
             $table->timestamps();
         });
     }
