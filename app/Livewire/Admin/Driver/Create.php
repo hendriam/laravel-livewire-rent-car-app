@@ -45,7 +45,7 @@ class Create extends Component
         ]);
 
         session()->flash('success', 'Supir baru berhasil ditambahkan!');
-        return redirect()->route('admin.drivers.edit', ['driver' => $created->driver]);
+        return redirect()->route('admin.drivers.edit', ['driver' => $created->id]);
     }
 
     public function render()
