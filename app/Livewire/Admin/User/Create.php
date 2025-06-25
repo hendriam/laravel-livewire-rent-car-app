@@ -40,7 +40,9 @@ class Create extends Component
         ]);
 
         session()->flash('success', 'User baru berhasil ditambahkan!');
-        return redirect()->route('admin.users.create');
+        
+        // reset form
+        $this->reset(); 
     }
 
     public function render()
