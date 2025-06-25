@@ -17,7 +17,7 @@ class Index extends Component
     #[Title('Manejemen Supir')] 
 
     public string $search = '';
-    public string $sortField = 'fullname';
+    public string $sortField = 'created_at';
     public string $sortDirection = 'asc';
 
     protected $queryString = ['search', 'sortField', 'sortDirection'];
