@@ -4,19 +4,13 @@
     <x-ui.admin.card>
         @if (session('success'))
             <x-ui.alert class="text-green-800 bg-green-50 dark:bg-gray-800 dark:text-green-400">
-                <span class="sr-only">Info</span>
-                <div>
-                    <span class="ms-3 text-sm font-medium">Success! </span> {{ session('success') }}
-                </div>
+                <span class="text-sm font-medium">Success! </span> {{ session('success') }}
             </x-ui.alert>
         @endif
 
         @if (session('error'))
             <x-ui.alert class="text-red-800 bg-red-50 dark:bg-gray-800 dark:text-red-400">
-                <span class="sr-only">Error</span>
-                <div>
-                    <span class="ms-3 text-sm font-medium">Error! </span> {{ session('error') }}
-                </div>
+                <span class="text-sm font-medium">Fail! </span> {{ session('error') }}
             </x-ui.alert>
         @endif
         
@@ -62,14 +56,12 @@
                                     <x-ui.admin.button-yellow class="text-xs p-2 font-semibold"><x-ui.icons.icon-edit /> Edit</x-ui.admin.button-yellow>
                                 </a>
                                 
-                                <x-ui.admin.button-red type="button" wire:click="delete({{ $user->id }})">
-                                    <span wire:loading wire:target="delete({{ $user->id }})">
-                                        <x-ui.icons.icon-loading />
-                                    </span>
-
-                                    <span wire:loading.remove wire:target="delete({{ $user->id }})">
-                                        <x-ui.icons.icon-delete />
-                                    </span>
+                                <x-ui.admin.button-red
+                                    type="button"
+                                    wire:click="$set('idToDelete', {{ $user->id }})"
+                                    @click="$dispatch('open-delete-confirm')"
+                                >
+                                    <x-ui.icons.icon-delete />
                                     Delete
                                 </x-ui.admin.button-red>
                             </div>
@@ -78,6 +70,11 @@
                 @endforeach
             </x-ui.table>
 
+            <x-ui.confirm-delete-modal 
+                wireDelete="delete"
+                title="Hapus Supir"
+                message="Apakah Anda yakin ingin menghapus data ini? Data tidak dapat dikembalikan."
+            />
         </x-ui.admin.card-body>
 
         <x-ui.admin.card-footer>

@@ -22,7 +22,9 @@ class Index extends Component
 
     protected $queryString = ['search', 'sortField', 'sortDirection'];
 
-     public function updatingSearch()
+    public int|null $idToDelete = null;
+
+    public function updatingSearch()
     {
         $this->resetPage();
     }
@@ -36,15 +38,27 @@ class Index extends Component
         $this->sortField = $field;
     }
 
-    public function delete($id)
+    public function delete()
     {
-        $user = User::findOrFail($id);
-        if (Auth::id() === $user->id) {
-            session()->flash('error', 'Tidak bisa menghapus akun sendiri!');
-            return;
+        if ($this->idToDelete) {
+
+            $user = User::findOrFail($this->idToDelete);
+            if (Auth::id() === $user->id) {
+                $this->dispatch('close-delete-confirm');
+                session()->flash('error', 'Tidak bisa menghapus akun sendiri!');
+                return;
+            }
+
+            $user->delete();
+            
+            // Reset idToDelete untuk menghindari penghapusan berulang
+            $this->reset('idToDelete');
+            
+            // Tutup modal pakai browser event
+            $this->dispatch('close-delete-confirm');
+
+            session()->flash('success', 'User berhasil dihapus.');
         }
-        $user->delete();
-        session()->flash('success', 'User berhasil dihapus.');
     }
 
     public function render()
