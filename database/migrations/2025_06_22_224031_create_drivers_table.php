@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('drivers', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('fullname');
             $table->string('phone');
             $table->text('address')->nullable();
             $table->enum('status', ['available', 'unavailable'])->default('available');
