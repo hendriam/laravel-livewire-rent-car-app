@@ -2,11 +2,16 @@
 
 namespace App\Livewire\Admin\Car;
 
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Auth;
+
+use Intervention\Image\Laravel\Facades\Image;
+
 use Livewire\Component;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
-use Illuminate\Support\Facades\Auth;
 use Livewire\WithFileUploads;
+
 use App\Models\Car;
 
 #[Layout('components.layouts.admin')]
@@ -38,7 +43,10 @@ class Create extends Component
 
         $photoPath = null;
         if ($this->photo) {
-            $photoPath = $this->photo->store('cars', 'public');
+            $image = Image::read($this->photo->getRealPath())->resize(800, 500);
+            $filename = 'cars/' . uniqid() . '.' . $this->photo->getClientOriginalExtension();
+            Storage::disk('public')->put($filename, (string) $image->encode());
+            $photoPath = $filename;
         }
 
         $created = Car::create([
@@ -54,7 +62,7 @@ class Create extends Component
         ]);
 
         session()->flash('success', 'Mobil baru berhasil ditambahkan!');
-        return redirect()->route('admin.cars.edit', ['car' => $created->id]);
+        $this->reset();
     }
 
     public function render()
