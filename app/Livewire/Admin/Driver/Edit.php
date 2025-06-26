@@ -69,7 +69,7 @@ class Edit extends Component
             'updated_by' => Auth::id(),
         ]);
 
-        session()->flash('success', 'Supir berhasil diperbarui.');
+        session()->flash('success', 'Supir '.$this->fullname.' berhasil diperbarui.');
         return redirect()->route('admin.drivers.edit', ['driver' => $this->driver]);
     }
 
