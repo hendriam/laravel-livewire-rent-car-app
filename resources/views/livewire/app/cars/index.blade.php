@@ -1,10 +1,8 @@
 <section class="">
     <img src="{{ asset('assets/images/vector-4.svg') }}" class="absolute w-full h-auto -z-10" alt="vector-4" srcset="">
-    <div class="xl:mx-auto max-w-6xl px-5 xl:px-0 py-16">
-        <div class="flex justify-between items-center">
-            <h2 class="text-3xl md:text-5xl font-semibold">Semua Armada Kami</h2>
-        </div>
-        <div class="mt-10">
+    <div class="xl:mx-auto max-w-6xl px-5 xl:px-0 py-12 md:py-20">
+        <h2 class="text-3xl md:text-5xl font-semibold text-center sm:text-start">Semua Armada Kami</h2>
+        <div class="mt-5 md:mt-10">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 group">
                 @foreach ($cars as $car)
                     <div class="bg-[url('/public/assets/images/vector-3.svg')] w-full bg-contain bg-no-repeat shadow-md transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-3d intersect:motion-preset-slide-up-md motion-delay-100 intersect-once">
