@@ -10,7 +10,7 @@ use App\Livewire\Customer\Auth\ForgotPassword as CustomerForgetPassword;
 
 //  Cars controller
 use App\Livewire\App\Cars\Index as CarsIndex;
-
+use App\Livewire\App\Cars\Detail as CarsDetail;
 
 // for admin 
 use App\Livewire\Admin\Auth\Login as AdminLogin;
@@ -37,6 +37,7 @@ use App\Http\Controllers\LogoutCustomerController;
 
 Route::get('/', Home::class)->name('home');
 Route::get('/cars', CarsIndex::class)->name('cars.index');
+Route::get('/cars/{car}/detail', CarsDetail::class)->name('cars.detail');
 
 Route::get('login', CustomerLogin::class)->name('login');
 Route::get('register', CustomerRegister::class)->name('register');
