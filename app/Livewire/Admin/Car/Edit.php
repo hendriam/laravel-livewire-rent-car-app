@@ -24,7 +24,7 @@ class Edit extends Component
 
     public Car $car;
 
-    public $brand, $model, $plate_number, $year, $price_without_driver, $price_with_driver;
+    public $brand, $model, $plate_number, $color, $year, $price_without_driver, $price_with_driver;
     public $status = 'available', $photo;
     public $oldPhotoPath;
 
@@ -47,6 +47,7 @@ class Edit extends Component
         $this->brand = $car->brand;
         $this->model = $car->model;
         $this->plate_number = $car->plate_number;
+        $this->color = $car->color;
         $this->year = $car->year;
         $this->status = $car->status;
         $this->price_with_driver = $car->price_with_driver;
@@ -78,6 +79,7 @@ class Edit extends Component
             'brand' => $this->brand,
             'model' => $this->model,
             'plate_number' => $this->plate_number,
+            'color' => $this->color,
             'year' => $this->year,
             'status' => $this->status,
             'price_without_driver' => $this->price_without_driver,

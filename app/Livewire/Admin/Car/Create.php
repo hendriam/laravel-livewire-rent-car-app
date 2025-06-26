@@ -21,7 +21,7 @@ class Create extends Component
 
     #[Title('Manejemen Mobil - Rent.Car')]
 
-    public $brand, $model, $plate_number, $year, $price_without_driver, $price_with_driver;
+    public $brand, $model, $plate_number, $color, $year, $price_without_driver, $price_with_driver;
     public $status = 'available', $photo;
 
     protected function rules() {
@@ -29,6 +29,7 @@ class Create extends Component
             'brand' => 'required|string|min:3|max:255',
             'model' => 'required|string|min:3|max:255',
             'plate_number' => 'required|string|min:6|max:12|unique:cars,plate_number,',
+            'color' => 'required|string',
             'year' => 'required|integer|min:1900|max:' . date('Y'),
             'status' => 'required|string|in:available,rented,maintenance',
             'price_without_driver' => 'required|numeric|min:3',
@@ -53,6 +54,7 @@ class Create extends Component
             'brand' => $this->brand,
             'model' => $this->model,
             'plate_number' => $this->plate_number,
+            'color' => $this->color,
             'year' => $this->year,
             'status' => $this->status,
             'price_without_driver' => $this->price_without_driver,

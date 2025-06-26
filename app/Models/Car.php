@@ -10,6 +10,7 @@ class Car extends Model
         'brand',
         'model',
         'plate_number',
+        'color',
         'year',
         'status',
         'price_without_driver',

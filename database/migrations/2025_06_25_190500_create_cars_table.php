@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('brand');
             $table->string('model');
             $table->string('plate_number')->unique();
+            $table->string('color');
             $table->year('year');
             $table->enum('status', ['available', 'rented', 'maintenance'])->default('available');
             $table->decimal('price_without_driver', 10, 2);

@@ -35,6 +35,7 @@
                 ['label' => 'Brand', 'field' => 'brand'],
                 ['label' => 'Model', 'field' => 'model'],
                 ['label' => 'Plat Nomor', 'field' => 'plate_number'],
+                ['label' => 'Warna', 'field' => 'color'],
                 ['label' => 'Tahun', 'field' => 'year'],
                 ['label' => 'Status', 'field' => 'status'],
                 ['label' => 'Harga Dengan Supir', 'field' => 'price_with_driver'],
@@ -48,6 +49,7 @@
                         <th class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">{{ $car->brand }}</th>
                         <td class="px-4 py-2 ">{{ $car->model }}</td>
                         <td class="px-4 py-2 ">{{ $car->plate_number }}</td>
+                        <td class="px-4 py-2 ">{{ $car->color }}</td>
                         <td class="px-4 py-2 ">{{ $car->year }}</td>
                         <td class="px-4 py-2 ">{{ $car->status }}</td>
                         <td class="px-4 py-2 ">{{ number_format($car->price_with_driver, 0, ',', '.') }}</td>

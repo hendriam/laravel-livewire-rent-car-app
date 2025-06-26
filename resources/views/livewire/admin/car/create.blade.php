@@ -27,7 +27,7 @@
         <form wire:submit.prevent="save" class="w-full pb-3">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 items-start lg:gap-5">
                 <div class="grid gap-3 sm:grid-cols-2">
-                    <div class="sm:col-span-2">
+                    <div class="w-full">
                         <x-ui.label for="brand">Brand</x-ui.label>
                          <x-ui.select wire:model.defer="brand">
                             <option selected="">Select brand</option>
@@ -53,6 +53,22 @@
                         <x-ui.label for="plate_number">Plat Nomor</x-ui.label>
                         <x-ui.input type="text" wire:model.defer="plate_number" class="w-full" placeholder="Contoh: BK 0001 AMD" />
                         @error('plate_number')<p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oops!</span> {{ $message }}!</p>@enderror
+                    </div>
+
+                    <div class="w-full">
+                        <x-ui.label for="color">Warna</x-ui.label>
+                         <x-ui.select wire:model.defer="color">
+                            <option selected="">Select warna</option>
+                            <option value="Putih">Putih</option>
+                            <option value="Hiam">Hiam</option>
+                            <option value="Coklat">Coklat</option>
+                            <option value="Silver">Silver</option>
+                            <option value="Merah">Merah</option>
+                            <option value="Kuning">Kuning</option>
+                            <option value="Biru">Biru</option>
+                            <option value="Abu-abu">Abu-abu</option>
+                        </x-ui.select>
+                        @error('color')<p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oops!</span> {{ $message }}!</p>@enderror
                     </div>
     
                     <div class="w-full">

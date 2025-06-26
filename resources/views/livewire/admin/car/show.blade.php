@@ -21,6 +21,8 @@
         <div class="grid grid-cols-2 gap-2">
             <div class="">
                 <h1 class="text-4xl font-semibold">{{ $car->brand }} {{ $car->model }}</h1>
+                <h2 class="text-lg font-medium text-gray-500 dark:text-gray-400 mt-2">Plat {{ $car->plate_number }}</h2>
+                <h2 class="text-lg font-medium text-gray-500 dark:text-gray-400 mt-2">Warna {{ $car->color }}</h2>
                 <h2 class="text-lg font-medium text-gray-500 dark:text-gray-400 mt-2">Tahun {{ $car->year }}</h2>
                 <div class="mt-4">
                     <span class="text-base text-gray-600 dark:text-gray-500">Harga Dengan Supir</span>
