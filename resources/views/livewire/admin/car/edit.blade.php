@@ -24,84 +24,93 @@
 
         <x-ui.hr />
 
-        <form wire:submit.prevent="update" class="max-w-2xl pb-3">
-            <div class="grid gap-3 sm:grid-cols-2">
-                <div class="sm:col-span-2">
-                    <x-ui.label for="brand">Brand</x-ui.label>
-                    <x-ui.input type="text" wire:model.defer="brand" class="w-full" placeholder="Contoh: Toyota" />
-                    @error('brand')<p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oops!</span> {{ $message }}!</p>@enderror
-                </div>
-
-                <div class="w-full">
-                    <x-ui.label for="model">Model</x-ui.label>
-                    <x-ui.input type="text" wire:model.defer="model" class="w-full" placeholder="Contoh: Avanza" />
-                    @error('model')<p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oops!</span> {{ $message }}!</p>@enderror
-                </div>
-                
-                <div class="w-full">
-                    <x-ui.label for="plate_number">Plat Nomor</x-ui.label>
-                    <x-ui.input type="text" wire:model.defer="plate_number" class="w-full" placeholder="Contoh: BK 0001 AMD" />
-                    @error('plate_number')<p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oops!</span> {{ $message }}!</p>@enderror
-                </div>
-
-                <div class="w-full">
-                    <x-ui.label for="year">Tahun</x-ui.label>
-                    <x-ui.input type="number" wire:model.defer="year" class="w-full" placeholder="Contoh: Avanza" />
-                    @error('year')<p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oops!</span> {{ $message }}!</p>@enderror
-                </div>
-                
-                <div class="w-full">
-                    <x-ui.label for="status">Status</x-ui.label>
-                    <x-ui.select wire:model.defer="status">
-                        <option selected="">Select status</option>
-                        <option value="available">Tersedia</option>
-                        <option value="rented">Dirental</option>
-                        <option value="maintenance">Service</option>
-                    </x-ui.select>
-                    @error('status')<p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oops!</span> {{ $message }}!</p>@enderror
-                </div>
-
-                <div class="w-full">
-                    <x-ui.label for="price_with_driver">Harga Dengan Supir</x-ui.label>
-                    <x-ui.input type="number" wire:model.defer="price_with_driver" class="w-full" placeholder="Contoh: Avanza" />
-                    @error('price_with_driver')<p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oops!</span> {{ $message }}!</p>@enderror
-                </div>
-                
-                <div class="w-full">
-                    <x-ui.label for="price_without_driver">Harga Tanp Supir</x-ui.label>
-                    <x-ui.input type="number" wire:model.defer="price_without_driver" class="w-full" placeholder="Contoh: Avanza" />
-                    @error('price_without_driver')<p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oops!</span> {{ $message }}!</p>@enderror
-                </div>
-
-                <div class="sm:col-span-2">                    
-                    <x-ui.label for="photo">Photo</x-ui.label>
-                    <x-ui.input type="file" wire:model.defer="photo" class="w-full" placeholder="Masukkan poto (opsional)"/>
-                    @error('photo')<p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oops!</span> {{ $message }}!</p>@enderror
-                    <div wire:loading wire:target="photo">
-                        <p>Uploading...</p>
+        <form wire:submit.prevent="update" class="w-full pb-3">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-3 items-start lg:gap-5">
+                <div class="grid gap-3 sm:grid-cols-2">
+                    <div class="sm:col-span-2">
+                        <x-ui.label for="brand">Brand</x-ui.label>
+                         <x-ui.select wire:model.defer="brand">
+                            <option selected="">Select brand</option>
+                            <option value="Toyota">Toyota</option>
+                            <option value="Daihatsu">Daihatsu</option>
+                            <option value="Honda">Honda</option>
+                            <option value="Suzuki">Suzuki</option>
+                            <option value="Mitsubishi">Mitsubishi</option>
+                            <option value="Nissan">Nissan</option>
+                            <option value="Mazda">Mazda</option>
+                            <option value="Isuzu">Isuzu</option>
+                        </x-ui.select>
+                        @error('brand')<p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oops!</span> {{ $message }}!</p>@enderror
                     </div>
+    
+                    <div class="w-full">
+                        <x-ui.label for="model">Model</x-ui.label>
+                        <x-ui.input type="text" wire:model.defer="model" class="w-full" placeholder="Contoh: Avanza" />
+                        @error('model')<p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oops!</span> {{ $message }}!</p>@enderror
+                    </div>
+                    
+                    <div class="w-full">
+                        <x-ui.label for="plate_number">Plat Nomor</x-ui.label>
+                        <x-ui.input type="text" wire:model.defer="plate_number" class="w-full" placeholder="Contoh: BK 0001 AMD" />
+                        @error('plate_number')<p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oops!</span> {{ $message }}!</p>@enderror
+                    </div>
+    
+                    <div class="w-full">
+                        <x-ui.label for="year">Tahun</x-ui.label>
+                        <x-ui.input type="number" wire:model.defer="year" class="w-full" placeholder="Contoh: 2020" />
+                        @error('year')<p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oops!</span> {{ $message }}!</p>@enderror
+                    </div>
+                    
+                    <div class="w-full">
+                        <x-ui.label for="status">Status</x-ui.label>
+                        <x-ui.select wire:model.defer="status">
+                            <option selected="">Select status</option>
+                            <option value="available">Tersedia</option>
+                            <option value="rented">Dirental</option>
+                            <option value="maintenance">Service</option>
+                        </x-ui.select>
+                        @error('status')<p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oops!</span> {{ $message }}!</p>@enderror
+                    </div>
+    
+                    <div class="w-full">
+                        <x-ui.label for="price_with_driver">Harga Dengan Supir</x-ui.label>
+                        <x-ui.input type="number" wire:model.defer="price_with_driver" class="w-full" placeholder="Contoh: 200000" />
+                        @error('price_with_driver')<p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oops!</span> {{ $message }}!</p>@enderror
+                    </div>
+                    
+                    <div class="w-full">
+                        <x-ui.label for="price_without_driver">Harga Tanp Supir</x-ui.label>
+                        <x-ui.input type="number" wire:model.defer="price_without_driver" class="w-full" placeholder="Contoh: 300000" />
+                        @error('price_without_driver')<p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oops!</span> {{ $message }}!</p>@enderror
+                    </div>
+
+                    <div class="mt-2">
+                        <x-ui.admin.button-primary type="submit" wire:loading.attr="disabled" wire:target="update" class="flex items-center justify-center px-4 py-2.5">
+                            <span wire:loading wire:target="update">
+                                <x-ui.icons.icon-loading />
+                            </span>
+                            <span wire:loading.remove wire:target="update">
+                                <x-ui.icons.icon-save />
+                            </span>
+                            Simpan
+                        </x-ui.admin.button-primary>
+                    </div>
+                </div>
+
+                <div class="">
+                    <x-ui.label for="photo">Photo</x-ui.label>
+                    <x-ui.input type="file" wire:model.defer="photo" class="block w-full py-0"/>
+                    <div wire:loading wire:target="photo">Uploading...</div>
+                    @error('photo')<p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oops!</span> {{ $message }}!</p>@enderror
                     <div wire:loading.remove wire:target="photo">
                         @if ($photo)
                             <img src="{{ $photo->temporaryUrl() }}" class="mt-2 w-md h-auto rounded" />
                         @elseif ($oldPhotoPath)
-                            <img src="{{ asset('storage/' . $oldPhotoPath) }}" class="mt-2 w-xs h-auto rounded" />
+                            <img src="{{ asset('storage/' . $oldPhotoPath) }}" class="mt-2 w-md h-auto rounded" />
                         @endif
                     </div>
                 </div>
             </div>
-            
-            <div class="mt-3">
-                <x-ui.admin.button-primary type="submit" wire:loading.attr="disabled" wire:target="update" class="flex items-center justify-center px-4 py-2.5">
-                    <span wire:loading wire:target="update">
-                        <x-ui.icons.icon-loading />
-                    </span>
-                    <span wire:loading.remove wire:target="update">
-                        <x-ui.icons.icon-save />
-                    </span>
-                    Simpan
-                </x-ui.admin.button-primary>
-            </div>
         </form>
-
     </x-ui.admin.card>
 </div>
