@@ -22,6 +22,12 @@ use App\Livewire\Admin\Driver\Index as AdminDriverIndex;
 use App\Livewire\Admin\Driver\Create as AdminDriverCreate;
 use App\Livewire\Admin\Driver\Edit as AdminDriverEdit;
 
+// Driver cars
+use App\Livewire\Admin\Car\Index as AdminCarIndex;
+use App\Livewire\Admin\Car\Create as AdminCarCreate;
+use App\Livewire\Admin\Car\Edit as AdminCarEdit;
+use App\Livewire\Admin\Car\Show as AdminCarShow;
+
 use App\Http\Controllers\LogoutAdminController;
 use App\Http\Controllers\LogoutCustomerController;
 
@@ -50,6 +56,14 @@ Route::middleware(['isAdmin'])->prefix('admin')->name('admin.')->group(function 
         Route::get('/', AdminDriverIndex::class)->name('index');
         Route::get('/create', AdminDriverCreate::class)->name('create');
 		Route::get('/{driver}/edit', AdminDriverEdit::class)->name('edit');
+    });
+
+	// Car routes
+	Route::prefix('cars')->name('cars.')->group(function () {
+        Route::get('/', AdminCarIndex::class)->name('index');
+        Route::get('/create', AdminCarCreate::class)->name('create');
+		Route::get('/{car}/edit', AdminCarEdit::class)->name('edit');
+		Route::get('/{car}/show', AdminCarShow::class)->name('show');
     });
 
 	Route::post('logout', [LogoutAdminController::class, 'logout'])->name('logout');    
