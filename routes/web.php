@@ -8,6 +8,10 @@ use App\Livewire\Customer\Auth\Login as CustomerLogin;
 use App\Livewire\Customer\Auth\Register as CustomerRegister;
 use App\Livewire\Customer\Auth\ForgotPassword as CustomerForgetPassword;
 
+//  Cars controller
+use App\Livewire\App\Cars\Index as CarsIndex;
+
+
 // for admin 
 use App\Livewire\Admin\Auth\Login as AdminLogin;
 use App\Livewire\Admin\Dashboard as AdminDashboard;
@@ -32,6 +36,7 @@ use App\Http\Controllers\LogoutAdminController;
 use App\Http\Controllers\LogoutCustomerController;
 
 Route::get('/', Home::class)->name('home');
+Route::get('/cars', CarsIndex::class)->name('cars.index');
 
 Route::get('login', CustomerLogin::class)->name('login');
 Route::get('register', CustomerRegister::class)->name('register');
@@ -70,6 +75,9 @@ Route::middleware(['isAdmin'])->prefix('admin')->name('admin.')->group(function 
 });
 
 Route::middleware(['isCustomer'])->group(function () {
+
+	// Cars catalog routes
+
 	Route::post('logout', [LogoutCustomerController::class, 'logout'])->name('logout');    
 });
 

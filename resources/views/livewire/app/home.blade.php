@@ -47,7 +47,7 @@
     <section class="mx-auto max-w-6xl px-5 xl:px-0 py-16">
         <div class="flex justify-between items-center">
             <h2 class="text-5xl font-semibold">Armada Kami</h2>
-            <x-ui.button-primary type="button" class="px-3 py-1.5">Lihat Semua</x-ui.button-primary>
+            <a href="{{ route('cars.index') }}"><x-ui.button-primary type="button" class="px-3 py-1.5">Lihat Semua</x-ui.button-primary></a>
         </div>
         <div class="mt-10">
             @livewire('app.car-catalog')
