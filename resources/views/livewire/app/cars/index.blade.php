@@ -5,12 +5,13 @@
         <div class="mt-5 md:mt-10">
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 group">
                 @foreach ($cars as $car)
-                <a href="{{ route('cars.detail', $car->id) }}">
                     <div class="bg-[url('/public/assets/images/vector-3.svg')] w-full bg-contain bg-no-repeat shadow-md transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-3d intersect:motion-preset-slide-up-md motion-delay-100 intersect-once">
                         <div class="px-5 py-5">
                             <img src="{{ $car->photo ? asset('storage/' . $car->photo) : asset('assets/images/default-car.png') }}" width="400" class="" alt="vector-1" srcset="">
                             <div class="mt-5">
-                                <h4 class="text-2xl text-center font-semibold">{{ $car->brand }} {{$car->model}}</h4>
+                                <a href="{{ route('cars.detail', $car->id) }}">
+                                    <h4 class="text-2xl text-center font-semibold">{{ $car->brand }} {{$car->model}}</h4>
+                                </a>
                                 <div class="grid grid-cols-2 gap-2 justify-between mt-4">
                                     <div class="">
                                         <span class="text-[#4B4B4B] font-medium">Tanpa Supir</span>
@@ -25,7 +26,6 @@
                             </div>
                         </div>
                     </div>
-                </a>
                 @endforeach
             </div>
 
