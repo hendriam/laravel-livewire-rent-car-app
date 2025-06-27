@@ -27,7 +27,7 @@
                     </div>
                 </div>    
                 <div class="intersect:motion-preset-slide-left-md intersect-once">
-                    <h3 class="text-4xl font-semibold">CV. Rental Mobil</h3>
+                    <h3 class="text-4xl text-center md:text-start font-semibold">CV. Rental Mobil</h3>
                     <p class="mt-6 text-[#4B4B4B]">
                         CV. Rental Mobil adalah penyedia jasa sewa mobil di kota medan yang telah beroperasi sejak 2020.
                         Kami menawarkan jasa rental mobil dengan Harga yang cukup terjangkau, ada banyak pilihan Armada yang bisa anda pakai.
