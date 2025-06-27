@@ -1,10 +1,10 @@
 <div>
     <section class="">
         <img src="{{ asset('assets/images/vector-1.svg') }}" class="absolute w-full h-auto -z-10" alt="vector-1" srcset="">
-        <div class="px-5 xl:px-0 pt-5 sm:pt-10 md:pt-12 lg:pt-18 2xl:pt-27 3xl:pt-40 pb-10 space-x-6 mx-auto max-w-6xl flex items-center justify-between">
-            <div class="flex flex-col space-y-7 motion-preset-slide-right-md">
-                <h1 class="text-7xl xl:text-8xl font-semibold leading-24 xl:leading-28 text-white">Sewa mobil <br> <span class="text-secondary">disini aja.</span></h1>
-                <p class="text-[20px] text-[#4B4B4B]">Kami membuka pintu bagi Anda untuk menjelajahi dunia dengan nyaman dan penuh gaya. Menjadi mitra perjalanan tepercaya Anda.</p>
+        <div class="px-5 xl:px-0 pt-5 sm:pt-10 md:pt-12 lg:pt-18 2xl:pt-27 3xl:pt-40 pb-10 mx-auto max-w-6xl flex flex-col md:flex-row items-center justify-center md:justify-between space-x-6 space-y-6">
+            <div class="flex flex-col items-center md:items-start space-y-7 motion-preset-slide-right-md">
+                <h1 class="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-semibold leading-16 md:leading-24 xl:leading-28 text-white text-center md:text-start">Sewa mobil <br> <span class="text-secondary">disini aja.</span></h1>
+                <p class="text-[20px] text-[#4B4B4B] text-center md:text-start">Kami membuka pintu bagi Anda untuk menjelajahi dunia dengan nyaman dan penuh gaya. Menjadi mitra perjalanan tepercaya Anda.</p>
                 <x-ui.button-primary type="button" class="px-20 max-w-fit text-xl">Call us</x-ui.button-primary>
             </div>
             <div class="motion-preset-slide-left-md">
