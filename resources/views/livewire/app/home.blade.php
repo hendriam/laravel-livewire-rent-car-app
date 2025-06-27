@@ -16,7 +16,7 @@
 
     <section class="mx-auto max-w-6xl px-5 xl:px-0 pt-20 pb-10">
         <div class="max-w-5xl mx-auto">
-            <div class="flex sm:space-x-8 space-y-24 sm:flex-row flex-col justify-center items-center">
+            <div class="flex sm:space-x-8 space-y-24 md:flex-row flex-col justify-center items-center">
                 <div class="-z-10 intersect:motion-preset-slide-right-md intersect-once">
                     <div class="-z-10 relative">
                         <div class="bg-primary -z-10 w-[450px] h-[450px] rounded-full pt-18 pl-15">
@@ -46,7 +46,7 @@
 
     <section class="mx-auto max-w-6xl px-5 xl:px-0 py-16">
         <div class="flex justify-between items-center">
-            <h2 class="text-5xl font-semibold">Armada Kami</h2>
+            <h2 class="text-3xl sm:text-5xl font-semibold">Armada Kami</h2>
             <a href="{{ route('cars.index') }}"><x-ui.button-primary type="button" class="px-3 py-1.5">Lihat Semua</x-ui.button-primary></a>
         </div>
         <div class="mt-10">
