@@ -12,6 +12,12 @@ use App\Livewire\Customer\Auth\ForgotPassword as CustomerForgetPassword;
 use App\Livewire\App\Cars\Index as CarsIndex;
 use App\Livewire\App\Cars\Detail as CarsDetail;
 
+// Booking controllers
+use App\Livewire\App\Bookings\WithDriver;
+use App\Livewire\App\Bookings\WithoutDriver;
+use App\Livewire\App\Bookings\BookingDetail;
+use App\Livewire\App\Bookings\BookingConfirm;
+
 // for admin 
 use App\Livewire\Admin\Auth\Login as AdminLogin;
 use App\Livewire\Admin\Dashboard as AdminDashboard;
@@ -76,12 +82,18 @@ Route::middleware(['isAdmin'])->prefix('admin')->name('admin.')->group(function 
 });
 
 Route::middleware(['isCustomer'])->group(function () {
-
-	// Cars catalog routes
-
 	Route::post('logout', [LogoutCustomerController::class, 'logout'])->name('logout');    
 });
 
+Route::middleware(['appMiddleware'])->group(function () {
+	// Booking routes
+	Route::prefix('bookings')->name('bookings.')->group(function () {
+		Route::get('booking-with-driver/{car}', WithDriver::class)->name('with-driver');
+		Route::get('booking-without-driver/{car}', WithoutDriver::class)->name('without-driver');
+		Route::get('detail/{booking}', BookingDetail::class)->name('booking-detail');
+		Route::get('confirm/{booking}', BookingConfirm::class)->name('booking-confirm');
+    });
+});
 
 
 
