@@ -16,18 +16,18 @@
 
     <section class="mx-auto max-w-6xl px-5 xl:px-0 pt-20 pb-10">
         <div class="max-w-5xl mx-auto">
-            <div class="flex sm:space-x-8 space-y-24 md:flex-row flex-col justify-center items-center">
+            <div class="flex md:space-x-8 space-y-24 md:flex-row flex-col justify-center items-center">
                 <div class="-z-10 intersect:motion-preset-slide-right-md intersect-once">
                     <div class="-z-10 relative">
-                        <div class="bg-primary -z-10 w-[450px] h-[450px] rounded-full pt-18 pl-15">
-                            <h2 class="text-5xl text-white font-semibold">Sewa Mobil</h2>
-                            <h3 class="text-6xl text-secondary font-semibold">Terlengkap</h3>
+                        <div class="bg-primary -z-10 w-[350px] h-[350px] md:w-[450px] md:h-[450px] rounded-full pt-15 md:pt-18 pl-13 md:pl-15">
+                            <h2 class="text-4xl md:text-5xl text-white font-semibold">Sewa Mobil</h2>
+                            <h3 class="text-5xl md:text-6xl text-secondary font-semibold">Terlengkap</h3>
                         </div>
                         <img src="{{ asset('assets/images/hero-img.svg') }}" class="w-md h-auto absolute -bottom-20" alt="profile " srcset="">
                     </div>
                 </div>    
                 <div class="intersect:motion-preset-slide-left-md intersect-once">
-                    <h3 class="text-4xl text-center md:text-start font-semibold">CV. Rental Mobil</h3>
+                    <h3 class="text-3xl sm:text-5xl text-center md:text-start font-semibold">CV. Rental Mobil</h3>
                     <p class="mt-6 text-[#4B4B4B]">
                         CV. Rental Mobil adalah penyedia jasa sewa mobil di kota medan yang telah beroperasi sejak 2020.
                         Kami menawarkan jasa rental mobil dengan Harga yang cukup terjangkau, ada banyak pilihan Armada yang bisa anda pakai.
