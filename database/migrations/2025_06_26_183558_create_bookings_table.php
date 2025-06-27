@@ -13,21 +13,20 @@ return new class extends Migration
     {
         Schema::create('bookings', function (Blueprint $table) {
             $table->id();
+            $table->string('booking_code')->nullable();
             $table->foreignId('customer_id')->constrained('users')->cascadeOnUpdate()->restrictOnDelete();
             $table->foreignId('car_id')->constrained('cars')->cascadeOnUpdate()->restrictOnDelete();
             $table->foreignId('driver_id')->nullable('drivers')->constrained()->cascadeOnUpdate()->nullOnDelete();
-
             $table->boolean('with_driver')->default(false);
             $table->date('start_date');
             $table->date('end_date');
+            $table->string('duration');
             $table->enum('status', ['pending', 'confirmed', 'cancelled', 'completed'])->default('pending');
-
             $table->decimal('total_price', 10, 2)->nullable();
             $table->text('notes')->nullable();
             $table->foreignId('confirmed_by')->nullable()->constrained('users')->cascadeOnUpdate()->restrictOnDelete();
             $table->foreignId('cancelled_by')->nullable()->constrained('users')->cascadeOnUpdate()->restrictOnDelete();
             $table->foreignId('completed_by')->nullable()->constrained('users')->cascadeOnUpdate()->restrictOnDelete();
-
             $table->timestamps();
         });
     }
