@@ -4,7 +4,7 @@
 		<span class="text-secondary font-semibold text-2xl">Rent.Car</span>
 	</a>
 
-	<ul class="flex space-x-8 text-lg">
+	<ul class="hidden md:flex space-x-8 text-lg">
 		<li><a href="/">About us</a></li>
 		<li><a href="/">Contact</a></li>
 		<li><a href="/">Services</a></li>
