@@ -21,7 +21,7 @@ return new class extends Migration
             $table->date('start_date');
             $table->date('end_date');
             $table->string('duration');
-            $table->enum('status', ['pending', 'confirmed', 'cancelled', 'completed'])->default('pending');
+            $table->enum('status', ['pending', 'confirmed', 'rented', 'cancelled', 'completed'])->default('pending');
             $table->decimal('total_price', 10, 2)->nullable();
             $table->text('notes')->nullable();
             $table->foreignId('confirmed_by')->nullable()->constrained('users')->cascadeOnUpdate()->restrictOnDelete();
