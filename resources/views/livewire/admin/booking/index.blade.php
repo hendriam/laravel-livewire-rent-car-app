@@ -24,24 +24,26 @@
         <x-ui.admin.card-body>
             <x-ui.table :data="$bookings" :columns="[
                 ['label' => 'Kode Booking', 'field' => 'booking_code'],
-                ['label' => 'Tanggal Booking', 'field' => 'start_date'],
-                ['label' => 'Tanggal Kembali', 'field' => 'end_date'],
+                ['label' => 'Tgl. Booking', 'field' => 'start_date'],
+                ['label' => 'Tgl. Kembali', 'field' => 'end_date'],
                 ['label' => 'Durasi', 'field' => 'duration'],
                 ['label' => 'Customer', 'field' => 'customer_id'],
                 ['label' => 'Mobil', 'field' => 'car_id'],
                 ['label' => 'Supir', 'field' => 'driver_id'],
+                ['label' => 'Total', 'field' => 'total_price'],
                 ['label' => 'Status', 'field' => 'status'],
                 ]" :sortField="$sortField" :sortDirection="$sortDirection"
             >
                 @foreach($bookings as $booking)
                     <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
                         <th class="px-4 py-2 font-medium text-gray-900 whitespace-nowrap dark:text-white">{{ $booking->booking_code }}</th>
-                        <td class="px-4 py-2 ">{{ $booking->start_date }}</td>
-                        <td class="px-4 py-2 ">{{ $booking->end_date }}</td>
+                        <td class="px-4 py-2 ">{{ $booking->start_date->format('Y-m-d') }}</td>
+                        <td class="px-4 py-2 ">{{ $booking->end_date->format('Y-m-d') }}</td>
                         <td class="px-4 py-2 ">{{ $booking->duration }}</td>
                         <td class="px-4 py-2 ">{{ $booking->customer->fullname }}</td>
                         <td class="px-4 py-2 ">{{ $booking->car->model }} - {{ $booking->car->brand }}</td>
                         <td class="px-4 py-2 ">{{ $booking->driver->fullname ?? 'Tanpa supir'}}</td>
+                        <td class="px-4 py-2 ">Rp {{ number_format($booking->total_price, 0, ',', '.') }}</td>
                         <td class="px-4 py-2 ">{{ $booking->status }}</td>
                         <td class="px-4 py-2 ">
                             <div class="flex space-x-1">
