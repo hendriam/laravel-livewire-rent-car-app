@@ -31,31 +31,31 @@ class Booking extends Model
 
     public function customer()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'customer_id');
     }
 
     public function car()
     {
-        return $this->belongsTo(Car::class);
+        return $this->belongsTo(Car::class, 'car_id');
     }
 
     public function driver()
     {
-        return $this->belongsTo(Driver::class);
+        return $this->belongsTo(Driver::class, 'driver_id');
     }
 
-    public function confirmed_by()
+    public function confirmedBy()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'confirmed_by');
     }
 
-    public function cancelled_by()
+    public function cancelledBy()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'cancelled_by');
     }
 
-    public function completed_by()
+    public function completedBy()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class, 'completed_by');
     }
 }

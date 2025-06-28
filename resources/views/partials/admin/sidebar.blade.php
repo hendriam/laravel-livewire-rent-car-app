@@ -62,6 +62,16 @@
 					<span class="ml-3">Mobil</span>
 				</a>
 			</li>
+
+			<li>
+				<a href="{{ route('admin.bookings.index') }}" class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 {{ request()->routeIs('admin.bookings.*') ? 'bg-gray-100 dark:bg-gray-700' : '' }} group">
+					<svg class="w-6 h-6 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+						<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 17v2M12 5.5V10m-6 7v2m15-2v-4c0-1.6569-1.3431-3-3-3H6c-1.65685 0-3 1.3431-3 3v4h18Zm-2-7V8c0-1.65685-1.3431-3-3-3H8C6.34315 5 5 6.34315 5 8v2h14Z"/>
+					</svg>
+
+					<span class="ml-3">Booking</span>
+				</a>
+			</li>
 		</ul>
 	</div>
 
