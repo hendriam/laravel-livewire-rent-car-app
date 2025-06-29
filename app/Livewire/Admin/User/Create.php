@@ -32,7 +32,7 @@ class Create extends Component
         User::create([
             'fullname' => $this->fullname,
             'email' => $this->email,
-            'password' => Hash::make('password123'),
+            'password' => Hash::make('admin123'),
             'phone' => $this->phone,
             'address' => $this->address,
             'type' => 'admin',
