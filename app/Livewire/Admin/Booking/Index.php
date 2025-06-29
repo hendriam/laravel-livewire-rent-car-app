@@ -2,6 +2,8 @@
 
 namespace App\Livewire\Admin\Booking;
 
+use Illuminate\Support\Facades\Auth;
+
 use Livewire\Component;
 use Livewire\Attributes\Layout;
 use Livewire\Attributes\Title;
@@ -22,7 +24,9 @@ class Index extends Component
 
     protected $queryString = ['search', 'sortField', 'sortDirection'];
 
-    public int|null $idToDelete = null;
+    public int|null $idToRented = null;
+    public int|null $idToCancelled = null;
+    public int|null $idToCompleted = null;
 
     public function updatingSearch()
     {
@@ -38,9 +42,61 @@ class Index extends Component
         $this->sortField = $field;
     }
 
-    public function updateStatus()
+    public function updateStatusToRented()
     {
-       
+        if ($this->idToRented) {
+            $booking = Booking::findOrFail($this->idToRented);
+
+            $booking->update([
+                'status' => 'rented',
+                'confirmed_by' => Auth::id()
+            ]);
+            
+            $this->reset('idToRented');
+            
+            // Tutup modal pakai browser event
+            $this->dispatch('close-rented-status-modal');
+
+            session()->flash('success', 'Kode booking '.$booking->booking_code.' berhasil diterima.');
+        }
+    }
+
+    public function updateStatusToCancelled()
+    {
+        if ($this->idToCancelled) {
+            $booking = Booking::findOrFail($this->idToCancelled);
+
+            $booking->update([
+                'status' => 'cancelled',
+                'cancelled_by' => Auth::id()
+            ]);
+            
+            $this->reset('idToCancelled');
+            
+            // Tutup modal pakai browser event
+            $this->dispatch('close-cancelled-status-modal');
+
+            session()->flash('success', 'Kode booking '.$booking->booking_code.' berhasil dibatalkan.');
+        }
+    }
+
+    public function updateStatusToCompleted()
+    {
+        if ($this->idToCompleted) {
+            $booking = Booking::findOrFail($this->idToCompleted);
+
+            $booking->update([
+                'status' => 'completed',
+                'completed_by' => Auth::id()
+            ]);
+            
+            $this->reset('idToCompleted');
+            
+            // Tutup modal pakai browser event
+            $this->dispatch('close-completed-status-modal');
+
+            session()->flash('success', 'Kode booking '.$booking->booking_code.' berhasil diselesaikan.');
+        }
     }
 
     public function render()

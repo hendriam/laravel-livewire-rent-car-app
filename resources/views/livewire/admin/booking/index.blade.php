@@ -47,17 +47,70 @@
                         <td class="px-4 py-2 ">{{ $booking->status }}</td>
                         <td class="px-4 py-2 ">
                             <div class="flex space-x-1">
-                                
+                                @if ($booking->status === 'pending')
+                                    <x-ui.admin.button-red
+                                        type="button"
+                                        wire:click="$set('idToCancelled', {{ $booking->id }})"
+                                        @click="$dispatch('open-cancelled-status-modal')"
+                                        class="text-xs"
+                                    >
+                                        <x-ui.icons.icon-close />
+                                        Batal
+                                    </x-ui.admin.button-red>
+                                @elseif($booking->status === 'confirmed')
+                                    <x-ui.admin.button-green
+                                        type="button"
+                                        wire:click="$set('idToRented', {{ $booking->id }})"
+                                        @click="$dispatch('open-rented-status-modal')"
+                                        class="text-xs"
+                                    >
+                                        <x-ui.icons.icon-check />
+                                        Terima
+                                    </x-ui.admin.button-green>
+
+                                    <x-ui.admin.button-red
+                                        type="button"
+                                        wire:click="$set('idToCancelled', {{ $booking->id }})"
+                                        @click="$dispatch('open-cancelled-status-modal')"
+                                        class="text-xs"
+                                    >
+                                        <x-ui.icons.icon-close />
+                                        Batal
+                                    </x-ui.admin.button-red>
+                                @elseif($booking->status === 'rented')
+                                    <x-ui.admin.button-yellow
+                                        type="button"
+                                        wire:click="$set('idToCompleted', {{ $booking->id }})"
+                                        @click="$dispatch('open-completed-status-modal')"
+                                        class="text-xs"
+                                    >
+                                        <x-ui.icons.icon-check />
+                                        Selesai
+                                    </x-ui.admin.button-yellow>
+                                @endif
+
                             </div>
                         </td>
                     </tr>
                 @endforeach
             </x-ui.table>
 
-            <x-ui.confirm-delete-modal 
-                wireDelete="delete"
-                title="Hapus Mobbil"
-                message="Apakah Anda yakin ingin menghapus data ini? Data tidak dapat dikembalikan."
+            <x-ui.confirm-rented-status-modal
+                wireUpdateStatusToRented="updateStatusToRented"
+                title="Konfirmasi"
+                message="Terima booking ini!"
+            />
+
+            <x-ui.confirm-cancelled-status-modal
+                wireUpdateStatusToCancelled="updateStatusToCancelled"
+                title="Konfirmasi"
+                message="Batalkan booking ini!"
+            />
+
+            <x-ui.confirm-completed-status-modal
+                wireUpdateStatusToCompleted="updateStatusToCompleted"
+                title="Konfirmasi"
+                message="Selesaikan booking ini!"
             />
         </x-ui.admin.card-body>
 
