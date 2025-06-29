@@ -34,6 +34,7 @@ class Register extends Component
             'password' => Hash::make($this->password),
             'phone' => $this->phone,
             'type' => 'customer',
+            'role' => 'guest',
         ]);
 
         Auth::login($user); // langsung login setelah register
