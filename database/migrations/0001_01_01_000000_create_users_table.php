@@ -20,8 +20,8 @@ return new class extends Migration
             $table->string('phone');
             $table->text('address')->nullable();
             $table->string('photo')->nullable();
-            $table->enum('type', ['guest', 'customer', 'admin'])->default('customer');
-            $table->enum('role', ['superadmin', 'kasir', 'operasional'])->default('superadmin');
+            $table->enum('type', ['customer', 'admin'])->default('customer');
+            $table->enum('role', ['superadmin', 'kasir', 'operasional', 'guest'])->default('superadmin');
             $table->rememberToken();
             $table->timestamps();
         });
