@@ -36,7 +36,6 @@
                 ['label' => 'Email', 'field' => 'email'],
                 ['label' => 'Phone', 'field' => 'phone'],
                 ['label' => 'Alamat', 'field' => 'address'],
-                ['label' => 'Tipe User', 'field' => 'type'],
                 ['label' => 'Role', 'field' => 'role'],
                 ['label' => 'Tgl. Input', 'field' => 'created_at']
                 ]" :sortField="$sortField" :sortDirection="$sortDirection"
@@ -47,7 +46,6 @@
                         <td class="px-4 py-2 ">{{ $user->email }}</td>
                         <td class="px-4 py-2 ">{{ $user->phone }}</td>
                         <td class="px-4 py-2 ">{{ $user->address }}</td>
-                        <td class="px-4 py-2 ">{{ $user->type }}</td>
                         <td class="px-4 py-2 ">{{ $user->role }}</td>
                         <td class="px-4 py-2 ">{{ $user->created_at ?? ''  }}</td>
                         <td class="px-4 py-2 ">
