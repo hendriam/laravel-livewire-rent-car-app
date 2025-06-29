@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Admin\User;
+namespace App\Livewire\Admin\Customer;
 
 use Livewire\Component;
 use Livewire\Attributes\Layout;
@@ -14,7 +14,7 @@ class Index extends Component
 {
     use WithPagination;
 
-    #[Title('Manejemen User')] 
+    #[Title('Manejemen Customer - Rent.Car')] 
 
     public string $search = '';
     public string $sortField = 'fullname';
@@ -57,18 +57,18 @@ class Index extends Component
             // Tutup modal pakai browser event
             $this->dispatch('close-delete-confirm');
 
-            session()->flash('success', 'User berhasil dihapus.');
+            session()->flash('success', 'Customer berhasil dihapus.');
         }
     }
 
     public function render()
     {
-        $users = User::where('type', 'admin')
+        $users = User::where('type', 'customer')
             ->where(function ($query) {
                 $query->where('fullname', 'like', "%{$this->search}%")
                     ->orWhere('email', 'like', "%{$this->search}%");
                 })->orderBy($this->sortField, $this->sortDirection)->paginate(10);
 
-        return view('livewire.admin.user.index', compact('users'));
+        return view('livewire.admin.customer.index', compact('users'));
     }
 }

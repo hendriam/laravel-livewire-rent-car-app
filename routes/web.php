@@ -27,6 +27,11 @@ use App\Livewire\Admin\User\Index as AdminUserIndex;
 use App\Livewire\Admin\User\Create as AdminUserCreate;
 use App\Livewire\Admin\User\Edit as AdminUserEdit;
 
+// Customer controllers
+use App\Livewire\Admin\Customer\Index as AdminCustomerIndex;
+use App\Livewire\Admin\Customer\Create as AdminCustomerCreate;
+use App\Livewire\Admin\Customer\Edit as AdminCustomerEdit;
+
 // Driver controllers
 use App\Livewire\Admin\Driver\Index as AdminDriverIndex;
 use App\Livewire\Admin\Driver\Create as AdminDriverCreate;
@@ -64,6 +69,13 @@ Route::middleware(['isAdmin'])->prefix('admin')->name('admin.')->group(function 
         Route::get('/', AdminUserIndex::class)->name('index');
         Route::get('/create', AdminUserCreate::class)->name('create');
 		Route::get('/{user}/edit', AdminUserEdit::class)->name('edit');
+    });
+
+	// Customer routes
+	Route::prefix('customers')->name('customers.')->group(function () {
+        Route::get('/', AdminCustomerIndex::class)->name('index');
+        Route::get('/create', AdminCustomerCreate::class)->name('create');
+		Route::get('/{user}/edit', AdminCustomerEdit::class)->name('edit');
     });
 
 	// Driver routes
