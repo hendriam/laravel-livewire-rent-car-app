@@ -36,7 +36,6 @@
                             class="w-fit mt-5 "
                         >
                             <span class="text-sm sm:text-xl">Konfirmasi Pembayaran</span>
-                            <!-- <span wire:loading wire:target="save" class="text-sm sm:text-xl">Process...</span> -->
                         </x-ui.button-primary>
                     </form>
                 </div>
@@ -52,9 +51,15 @@
     <div class="xl:mx-auto max-w-6xl px-5 xl:px-0 py-12 md:py-20">
         <div class="w-full flex flex-col items-center mt-2 lg:mt-8">
             <div class="text-center flex flex-col space-y-0.5 md:space-y-2">
-                <h3 class="text-3xl md:text-5xl font-semibold">Booking Berhasil</h3>
-                <h5 class="text-base md:text-[20px] text-[#4B4B4B]">Terima kasih telah sewa mobil kami, tim kami akan menghubungi anda.</h5>
-                
+                <h3 class="text-3xl md:text-5xl font-semibold">Selesai</h3>
+                <h5 class="text-base md:text-[20px] text-[#4B4B4B] mt-5">Transaksi sewa mobil anda berhasil. <br> Silahkan tunggu konfirmasi dari kami, tim kami akan menghubungi anda. <br> Terima kasih.</h5>
+                <a href="{{route('home')}}" class="w-fit self-center mt-5">
+                    <x-ui.button-primary
+                        type="button"
+                    >
+                    Kembali ke beranda
+                    </x-ui.button-primary>
+                </a>
             </div>
         </div>
     </div>
