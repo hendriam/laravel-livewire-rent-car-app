@@ -15,12 +15,20 @@
                                 <div class="grid grid-cols-2 gap-2 justify-between mt-4">
                                     <div class="">
                                         <span class="text-[#4B4B4B] font-medium">Tanpa Supir</span>
-                                        <x-ui.button-primary type="button" class="mt-1 px-2 w-full lg:max-w-fit">Rp. {{ number_format($car->price_without_driver, 0, ',', '.') }} / Hari</x-ui.button-primary>
+                                        <a href="{{ route('bookings.without-driver', $car->id) }}">
+                                            <x-ui.button-primary type="button" class="mt-1 px-2 w-full lg:max-w-fit">
+                                                Rp. {{ number_format($car->price_without_driver, 0, ',', '.') }} / Hari
+                                            </x-ui.button-primary>
+                                        </a>
                                     </div>
 
                                     <div class="">
                                         <span class="text-[#4B4B4B] font-medium ">Ikut supir</span>
-                                        <x-ui.button-primary type="button" class="mt-1 px-2 w-full lg:max-w-fit">Rp. {{ number_format($car->price_with_driver, 0, ',', '.') }} / Hari</x-ui.button-primary>
+                                        <a href="{{ route('bookings.with-driver', $car->id) }}">
+                                            <x-ui.button-primary type="button" class="mt-1 px-2 w-full lg:max-w-fit">
+                                                Rp. {{ number_format($car->price_with_driver, 0, ',', '.') }} / Hari
+                                            </x-ui.button-primary>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
