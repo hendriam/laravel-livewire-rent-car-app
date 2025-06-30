@@ -89,13 +89,13 @@
                     </div>
     
                     <div class="w-full">
-                        <x-ui.label for="price_with_driver">Harga Dengan Supir</x-ui.label>
+                        <x-ui.label for="price_with_driver">Harga Dengan Supir / Hari</x-ui.label>
                         <x-ui.input type="number" wire:model.defer="price_with_driver" class="w-full" placeholder="Contoh: 200000" />
                         @error('price_with_driver')<p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oops!</span> {{ $message }}!</p>@enderror
                     </div>
                     
                     <div class="w-full">
-                        <x-ui.label for="price_without_driver">Harga Tanp Supir</x-ui.label>
+                        <x-ui.label for="price_without_driver">Harga Tanpa Supir / Hari</x-ui.label>
                         <x-ui.input type="number" wire:model.defer="price_without_driver" class="w-full" placeholder="Contoh: 300000" />
                         @error('price_without_driver')<p class="mt-2 text-sm text-red-600 dark:text-red-500"><span class="font-medium">Oops!</span> {{ $message }}!</p>@enderror
                     </div>
